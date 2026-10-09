@@ -1,0 +1,16 @@
+/* Stage 5 — shared cinematic background across every page. */
+:root{--travel-surface:rgba(249,252,255,.92);--travel-ink:#102b43}
+html{min-height:100%;background:#09233e}
+body.travel-cinematic{position:relative;min-height:100vh;background:transparent!important;color:var(--travel-ink)}
+body.travel-cinematic::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(120deg,rgba(3,22,44,.45),rgba(8,43,70,.16) 55%,rgba(3,20,41,.38)),url('../pics/premium/cinematic-coast.webp') center center/cover no-repeat;background-color:#09233e}
+body.travel-cinematic::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(4,20,40,.06),rgba(4,20,40,.25))}
+/* Maintain contrast on top of the continuous background. */
+body.travel-cinematic :is(.section-margin,.section-padding,.section_gap,.area-padding-top,.area-padding-bottom,.explorer,.planner-shell,main:not(.hero-banner)){isolation:isolate}
+body.travel-cinematic :is(.section-margin,.section-padding,.section_gap,.area-padding-top,.area-padding-bottom):not(.premium-hero){background-color:rgba(247,251,255,.89)!important;backdrop-filter:blur(8px)}
+body.travel-cinematic main.explorer,body.travel-cinematic main.planner-shell{background:rgba(246,251,255,.9)!important;backdrop-filter:blur(9px);border-radius:24px;box-shadow:0 18px 65px rgba(2,20,40,.2);margin-top:30px;margin-bottom:45px;padding:clamp(20px,3vw,44px)}
+body.travel-cinematic .hero-banner.premium-hero{background:linear-gradient(90deg,rgba(5,24,47,.8),rgba(5,24,47,.2)),url('../pics/premium/cinematic-coast.webp') center/cover no-repeat!important}
+body.travel-cinematic :is(.footer-area,footer){background-color:rgba(5,24,47,.94)!important;color:#f4faff}
+body.travel-cinematic :is(.footer-area,footer) a{color:#e5f4ff}
+@media(max-width:767px){body.travel-cinematic::before{background-position:57% center}body.travel-cinematic main.explorer,body.travel-cinematic main.planner-shell{margin:12px;padding:18px}}
+@media(prefers-reduced-transparency:reduce){body.travel-cinematic :is(.section-margin,.section-padding,.section_gap,.area-padding-top,.area-padding-bottom,main.explorer,main.planner-shell){background-color:#f7fbff!important;backdrop-filter:none}}
+@media print{body.travel-cinematic::before,body.travel-cinematic::after{display:none}body.travel-cinematic{background:#fff!important}}

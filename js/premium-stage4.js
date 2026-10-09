@@ -1,0 +1,2 @@
+/* Progressive enhancement for the cinematic landing page. */
+(function(){'use strict';const field=document.getElementById('premium-destination');if(!field)return;function localize(){const fa=document.documentElement.lang.toLowerCase().startsWith('fa');field.placeholder=fa?'دوست دارید کجا سفر کنید؟':'Where would you like to go?';}localize();new MutationObserver(localize).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});})();

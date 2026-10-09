@@ -1,0 +1,27 @@
+
+/* Stage 4: cinematic 3D-inspired travel experience */
+:root{--travel-navy:#071e38;--travel-aqua:#31d3e3;--travel-gold:#f5bc68}
+.hero-banner.premium-hero{position:relative;isolation:isolate;min-height:650px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(5,24,47,.94) 0%,rgba(5,24,47,.76) 46%,rgba(5,24,47,.17) 100%),url('../pics/premium/cinematic-coast.webp') center/cover no-repeat!important;overflow:hidden;color:#fff;padding:125px 0 95px}
+.hero-banner.premium-hero:after{content:'';position:absolute;inset:auto -10% -180px; height:300px;background:radial-gradient(ellipse,rgba(49,211,227,.22),transparent 68%);z-index:-1;pointer-events:none}
+.premium-hero h1{color:#fff;font-size:clamp(2.6rem,5vw,5.3rem);line-height:1.08;font-weight:800;text-shadow:0 5px 30px #04192c}
+.premium-hero p{color:#e7f5ff!important;font-size:1.12rem;line-height:1.85;max-width:610px}
+.premium-hero .premium-eyebrow{color:#76edee;font-weight:700;letter-spacing:.17em;text-transform:uppercase}
+.premium-hero .premium-search{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:30px;padding:14px;border:1px solid #ffffff70;background:#ffffffeb;backdrop-filter:blur(15px);border-radius:20px;box-shadow:0 25px 70px #00152766;max-width:650px}
+.premium-search input{flex:1;min-width:190px;border:0;background:transparent;padding:13px;color:#0b2944;outline-offset:3px}
+.premium-search button{border:0;background:#0867d5;color:white;padding:15px 25px;border-radius:12px;font-weight:700;cursor:pointer}
+.premium-search button:hover{background:#034a9e}
+.premium-orb{width:min(33vw,340px);aspect-ratio:1;border-radius:50%;margin:auto;background:radial-gradient(circle at 30% 22%,#c4faff, #169dd5 28%,#05356e 63%,#02162e 90%);box-shadow:inset -30px -30px 55px #001e4e,0 35px 85px #0009,0 0 75px #53d9ff70;animation:travelFloat 8s ease-in-out infinite;position:relative}
+.premium-orb:before{content:'✈';position:absolute;top:35%;left:35%;font-size:5rem;color:white;text-shadow:0 12px 22px #001b46;transform:rotate(-20deg)}
+.premium-orb:after{content:'';position:absolute;inset:12%;border:1px solid #ffffff88;border-radius:50%;transform:rotateX(66deg) rotate(-25deg)}
+@keyframes travelFloat{50%{transform:translateY(-19px) rotate(4deg)}}
+.premium-feature-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.premium-feature-strip div{padding:17px 20px;border:1px solid #ffffff55;border-radius:16px;background:#ffffff17;backdrop-filter:blur(12px);font-weight:600;color:#fff}
+.premium-feature-strip span{color:#83f3f0;margin-right:8px}
+[dir=rtl] .premium-feature-strip span{margin-right:0;margin-left:8px}
+.premium-hero a.button-hero{background:#15b7c9!important;border-radius:12px;color:#04223d!important}
+.premium-hero .premium-orb-wrap{perspective:900px}
+.section-margin .card,.section-margin .single-destination,.section-margin .single-package{transition:transform .3s ease,box-shadow .3s ease;transform-style:preserve-3d}
+.section-margin .card:hover,.section-margin .single-destination:hover,.section-margin .single-package:hover{transform:translateY(-9px) rotateX(2deg);box-shadow:0 24px 50px #092b4c24}
+html[dir=rtl] .premium-hero{text-align:right;background-position:center right}
+@media(max-width:767px){.hero-banner.premium-hero{padding:110px 0 65px;min-height:unset}.premium-orb{width:180px;margin:32px auto}.premium-feature-strip{grid-template-columns:1fr}.premium-search button{width:100%}}
+@media(prefers-reduced-motion:reduce){.premium-orb{animation:none}.section-margin .card,.section-margin .single-destination,.section-margin .single-package{transition:none}}
