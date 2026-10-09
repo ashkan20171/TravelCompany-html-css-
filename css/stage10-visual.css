@@ -1,0 +1,17 @@
+
+/* Stage 10: background is scenery only; no screenshots, text, buttons or menus. */
+body.travel-cinematic::before{background:linear-gradient(110deg,rgba(4,22,43,.36),rgba(5,35,64,.07) 60%,rgba(4,22,43,.25)),url('../pics/premium/clean-coast.svg') center/cover no-repeat!important}
+body.travel-cinematic .hero-banner.premium-hero{background:linear-gradient(90deg,rgba(5,24,47,.82),rgba(5,24,47,.13)),url('../pics/premium/clean-coast.svg') center/cover no-repeat!important}
+html[lang="en"] body .premium-hero,html[lang="en"] body .premium-search{direction:ltr;text-align:left}
+html[lang="fa"] body .premium-hero,html[lang="fa"] body .premium-search{direction:rtl;text-align:right}
+body.travel-cinematic .premium-orb{width:min(290px,30vw)!important;height:min(290px,30vw)!important;max-width:100%;filter:drop-shadow(0 22px 35px #00182e55)}
+@media(max-width:767px){body.travel-cinematic .premium-orb{width:180px!important;height:180px!important}}
+/* Reusable compact nav for the explorer and planner pages. */
+.stage10-simple-nav{position:sticky;top:0;z-index:1500;display:flex;align-items:center;gap:clamp(10px,2vw,28px);padding:12px clamp(18px,4vw,60px);background:rgba(6,25,48,.96);border-bottom:1px solid #ffffff35;backdrop-filter:blur(16px);color:white}
+.stage10-simple-nav .stage10-logo{margin-inline-end:auto;display:block;flex:0 1 205px}
+.stage10-simple-nav .stage10-logo img{display:block;width:100%;height:auto}
+.stage10-simple-nav a:not(.stage10-logo){color:#fff;text-decoration:none;font-size:14px;white-space:nowrap}
+.stage10-simple-nav a:focus-visible,.stage10-simple-nav button:focus-visible{outline:3px solid #f8d47a;outline-offset:3px}
+.stage10-simple-nav button{border:1px solid #ffffff55;background:#ffffff20;color:white;padding:9px 13px;border-radius:10px;cursor:pointer}
+html[dir="rtl"] .stage10-simple-nav{direction:rtl}
+@media(max-width:700px){.stage10-simple-nav{flex-wrap:wrap}.stage10-simple-nav .stage10-logo{flex-basis:100%;max-width:180px}.stage10-simple-nav a:not(.stage10-logo){font-size:12px}}

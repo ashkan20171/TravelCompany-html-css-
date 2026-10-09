@@ -60,3 +60,51 @@ Fixed malformed list nesting and conflicting flex layouts across all HTML pages.
 ## Stage 9 header hotfix
 
 Replaced redundant header quick links with a compact search action, enforced brand-left/navigation-right for English and brand-right for Persian, and improved responsive collapse. Check all pages in a browser after clearing cache. This is a frontend-only project.
+
+
+## Stage 10 — clean cinematic backgrounds
+- Replaced the screenshot-like background (which included fake UI) with a locally bundled, text-free illustrated coastal SVG.
+- Applied the clean background to every page and the home hero.
+- Added matching navigation on Explorer and Planner with English/Persian labels.
+- Preserved the existing features; booking and AI remain demonstrations.
+
+## Stage 11 — Destination discovery polish
+- Responsive destination cards with region badges, favorites, sample price disclosure, accessible focus styles and hover motion.
+- Improved filter form, enquiry layout and RTL support.
+- Fixed conflicting language preferences on the Explorer/Planner navigation; language now uses `ashkan-travel-language` shared with the rest of the site.
+- The app remains a static frontend. Prices and currency conversion are illustrative; the enquiry uses the local mail application; the chat is rule-based, not a live AI integration.
+
+## Stage 12 — Tour details
+
+- `tour-details.html?tour=paris|india|netherlands` has bilingual tour descriptions, highlights and suggested daily itineraries.
+- Destination Explorer links to detail pages and enquiry links preselect the selected tour.
+- Favorites are shared with the Explorer using localStorage.
+- English is default; Persian is RTL and stored across pages.
+- Tour content, prices, currency conversion and itineraries are demonstration data. No live reservations or payments.
+
+
+## Stage 13 — travel enquiry wizard
+- New `booking.html` with a three-step responsive English/Persian enquiry workflow, live illustrative cost estimate, traveler/date validation and review screen.
+- Tour details enquiry buttons now open the wizard and preselect the tour.
+- The final action prepares a mailto draft; it does **not** create a booking, send an email automatically, collect payment, or check live availability.
+- All prices are illustrative USD amounts and child estimate uses a sample 65% multiplier.
+
+
+## Stage 14 — My Trips
+- `my-trips.html` lists optional saved enquiry drafts, with per-draft and clear-all deletion.
+- Booking review step now offers an explicit Save Draft action.
+- Only destination, departure date, traveler counts and illustrative cost are stored in this browser; personal contact details are not stored.
+- No login, payment, server persistence or confirmed reservation is implied.
+
+
+## Stage 15 — Travel Preferences
+- Added `profile.html`, a bilingual, responsive, local-only travel preference screen.
+- Saves style, approximate USD budget and preferred duration in localStorage; includes validation and reset.
+- Accessible Preferences shortcut on existing pages.
+- No account, real personalization of tour availability, or backend is implied.
+
+## Stage 16 — Personalized Recommendations (local demo)
+- New bilingual `recommendations.html` uses saved local preferences to rank the three sample tours.
+- Filters for style, USD budget, and duration; if no exact match, alternatives are clearly labeled.
+- Direct links to tour details and shortcuts from Preferences, Explorer, and My Trips.
+- No external AI API or backend; matching is a transparent rules-based demo.

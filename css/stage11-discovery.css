@@ -1,0 +1,36 @@
+
+/* Stage 11 — refined travel discovery, consistent readable cards and mobile-first UI */
+:root{--s11-deep:#092e52;--s11-ocean:#087ca7;--s11-gold:#e9ac50;--s11-ink:#142b40}
+body.travel-cinematic .explorer{max-width:1190px;margin-inline:auto}
+body.travel-cinematic .explorer h1{font-weight:800;letter-spacing:-.035em;color:var(--s11-deep);font-size:clamp(2rem,4vw,3.5rem)}
+body.travel-cinematic .explorer-lead{font-size:1.1rem;line-height:1.8;color:#35536b}
+body.travel-cinematic .explorer-controls{display:grid;grid-template-columns:minmax(180px,2fr) repeat(2,minmax(140px,1fr));gap:12px;margin:24px 0}
+body.travel-cinematic .explorer-controls input,body.travel-cinematic .explorer-controls select{width:100%;min-height:52px;padding:12px 15px;border:1px solid #bed2df;border-radius:13px;background:#fff;color:#18354e;box-shadow:0 4px 15px #153b5710}
+body.travel-cinematic .explorer-controls :is(input,select):focus-visible{outline:3px solid #5bbde4;outline-offset:2px}
+body.travel-cinematic .destination-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch}
+body.travel-cinematic .destination-card.stage11-card{position:relative;overflow:hidden;border:1px solid #e0ebf2;border-radius:22px;background:#fff;box-shadow:0 12px 35px rgba(7,38,65,.11);transition:transform .25s ease,box-shadow .25s ease;display:flex;flex-direction:column}
+body.travel-cinematic .destination-card.stage11-card:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(7,38,65,.2)}
+body.travel-cinematic .stage11-card>img{width:100%;height:230px;object-fit:cover;display:block}
+body.travel-cinematic .stage11-badge{position:absolute;top:14px;inset-inline-start:14px;background:#082a49e8;color:#fff;border:1px solid #ffffff50;border-radius:99px;padding:7px 14px;font-size:.85rem;font-weight:700}
+body.travel-cinematic .stage11-card .destination-body{padding:22px;display:flex;flex:1;flex-direction:column;gap:8px}
+body.travel-cinematic .stage11-card h2{font-size:1.4rem;line-height:1.35;color:var(--s11-deep);margin:0}
+body.travel-cinematic .stage11-card .destination-meta{color:#486278;margin:0}
+body.travel-cinematic .stage11-card .destination-price{color:#076c93;font-weight:800;font-size:1.45rem;margin:6px 0 0}
+body.travel-cinematic .stage11-price-note{color:#667f91;font-size:.78rem;line-height:1.4}
+body.travel-cinematic .stage11-card .destination-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:auto;padding-top:15px}
+body.travel-cinematic .stage11-card .destination-actions button{flex:1 1 105px;min-height:44px;border:1px solid #0a83a6;border-radius:12px;padding:9px 12px;background:#087ca7;color:#fff;font-weight:700;cursor:pointer}
+body.travel-cinematic .stage11-card .destination-actions button.favorite{background:#fff;color:#08688a}
+body.travel-cinematic .stage11-card .destination-actions button[aria-pressed="true"]{background:#fff0dc;color:#6f4100;border-color:#e4a848}
+body.travel-cinematic .stage11-card button:focus-visible{outline:3px solid #e9ac50;outline-offset:3px}
+body.travel-cinematic #inquiry{background:#fff;border-radius:22px;padding:clamp(20px,3vw,40px);margin-top:40px;box-shadow:0 12px 32px #0a29441b}
+body.travel-cinematic #inquiry .inquiry-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+body.travel-cinematic #inquiry .inquiry-form label{display:flex;flex-direction:column;gap:8px;font-weight:600;color:#163b59}
+body.travel-cinematic #inquiry .inquiry-form input,body.travel-cinematic #inquiry .inquiry-form select,body.travel-cinematic #inquiry .inquiry-form textarea{width:100%;padding:12px;border:1px solid #bdcfdc;border-radius:11px;background:white;color:#102d45}
+body.travel-cinematic #inquiry .inquiry-form label:has(textarea){grid-column:1/-1}
+body.travel-cinematic #inquiry .inquiry-form button{background:#086e9e;color:white;border:0;border-radius:12px;padding:12px 24px;min-height:48px}
+html[dir="rtl"] body.travel-cinematic :is(.explorer,.planner-shell){text-align:right}
+@media(max-width:900px){body.travel-cinematic .destination-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){body.travel-cinematic .destination-grid,body.travel-cinematic .explorer-controls,body.travel-cinematic #inquiry .inquiry-form{grid-template-columns:1fr}body.travel-cinematic .stage11-card>img{height:220px}}
+@media(prefers-reduced-motion:reduce){body.travel-cinematic .destination-card.stage11-card{transition:none}body.travel-cinematic .destination-card.stage11-card:hover{transform:none}}
+
+.stage12-details-link{display:flex;align-items:center;justify-content:center;flex:1 1 100%;min-height:43px;border:1px solid #0a83a6;border-radius:12px;padding:9px 12px;color:#075d84;background:#e7f7fc;font-weight:700;text-decoration:none}.stage12-details-link:hover{background:#d0effa;color:#064868}.stage12-details-link:focus-visible{outline:3px solid #e9ac50;outline-offset:3px}

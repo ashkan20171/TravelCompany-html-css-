@@ -1,0 +1,1 @@
+(()=>{const a=document.querySelector('.stage16-recommend-link span');if(!a)return;const sync=()=>a.textContent=document.documentElement.lang==='fa'?'سفرهای پیشنهادی':'Recommended trips';new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});sync()})();
